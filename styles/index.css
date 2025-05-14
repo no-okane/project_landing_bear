@@ -1,24 +1,170 @@
 /* index css */
 /* 북극곰 후원 안내============================================================== */
+/* ▼ 기본값 유지를 위해 작성 x, 기본값 : 너비는 부모의 100%, 높이는 내용만큼 */
 #wrap {}
 #wrap .intro {
     height: 100vh;
     background: url(../images/bg1.png) no-repeat center;
     background-size: cover;
-    margin: 0 auto;
+    position: relative;
 }
-#wrap .intro .container {}
-#wrap .intro .container h1 {}
+#wrap .intro::after {
+    content: '';/* 가상 요소 after 필수 속성 */
+    display: block;/* 가상 요소 after 필수 속성 */
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    background: linear-gradient(360deg, rgba(0,0,0,0.7), transparent);
+    z-index: 3;
+}
+#wrap .intro .container {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 100px;
+    /* 반응형 */
+    max-width: 1250px;
+    min-width: 320px;
+    overflow: hidden;
+    margin: 0 auto;
+    padding-top:100px;
+}
+#wrap .intro .container h1 {line-height: 130%;}
 #wrap .intro .container h1:first-of-type {}
 #wrap .intro .container h1:first-of-type a {}
 #wrap .intro .container h1:first-of-type a img {
     width: 89px;
 }
+#wrap .intro .container h1:last-of-type, em, a {color: #fff;}
+#wrap .intro .container h1:last-of-type {
+    text-align: center;
+    font-size: 4.375rem;
+}
 #wrap .intro .container h1:last-of-type {}
-#wrap .intro .container h1:last-of-type em {}
-#wrap .intro .container .sponsor_btn {}
-#wrap .intro .container .sponsor_question {}
+#wrap .intro .container h1:last-of-type em {
+    font-weight: 700;
+}
+
+#wrap .intro .container div:nth-of-type(1) {
+    background: linear-gradient(90deg,rgba(254, 147, 0, 1) 0%, rgba(255, 115, 0, 1) 100%);
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    padding: 15px 70px;
+    height: 71px;
+    border-radius: 50px;
+    width: max-content;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+#wrap .intro .container div:nth-of-type(2) {
+    background-color: #000;
+    padding: 10px 30px;
+    border-radius: 50px;
+    align-items: center;
+    align-content: center;
+    width: max-content;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: left;
+    margin-left: auto;
+}
+#wrap .intro .container .sponsor_btn {
+    display: block;
+    font-size: 2.125rem;
+    font-weight: 700;
+}
+#wrap .intro .container .sponsor_btn img {
+    transform: translateX(20%) translateY(10%);  
+}
+#wrap .intro .container .sponsor_question {
+    font-size: 1.625rem;
+    display: block;
+}
+#wrap .intro .container .sponsor_question img {
+    transform: translateX(20%) translateY(10%);  
+    width: 27px;
+}
 /* 퀴즈============================================================== */
+#wrap .quiz {
+    background: url(/images/quiz_bg.png) no-repeat center;
+    background-size: cover;
+}
+#wrap .quiz .container {    
+    padding: 150px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 auto;
+    max-width: 1250px;
+    min-width: 320px;}
+#wrap .quiz .container #left_quiz {}
+#wrap .quiz .container #left_quiz * {color: #fff;}
+#wrap .quiz .container #left_quiz h2 {
+    color: #fff;
+    font-size: 3.438rem;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 40px;
+}
+#wrap .quiz .container #left_quiz p {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+}
+#wrap .quiz .container #left_quiz .list {
+    display: grid;
+    grid-template-rows: repeat(4, 34px);
+
+}
+#wrap .quiz .container #left_quiz .list label {}
+#wrap .quiz .container #left_quiz .list label input {}
+#wrap .quiz .container #left_quiz .list label input[value*=q] {
+    display: none;
+}
+#wrap .quiz .container #left_quiz .list label input[value*=q]:checked + span {
+    background: url(/images/q_ck.png) no-repeat;
+    background-size: 12px;
+    background-position: 0 3.5px;
+    
+}
+#wrap .quiz .container #left_quiz .list label span {
+    display: block;
+    background: url(/images/q_blank.png) no-repeat;
+    background-size: 12px;
+    background-position: 0 3.5px;
+    padding-left: 20px;
+}
+#wrap .quiz .container #left_quiz button {
+    background-color: #050505;
+    font-size: 1.25rem;
+    color: #fff;
+    width: 450px;
+    padding: 10px 0;
+    border-radius: 50px;
+    margin-top: 20px;
+}
+#wrap .quiz .container .right * {color: #fff;}
+#wrap .quiz .container .right {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: end;
+    gap: 20px;
+    
+}
+#wrap .quiz .container .right img  {
+    width: 500px;
+}
+#wrap .quiz .container .right span  {
+    font-size: 1.25rem;
+}
+
 /* 동영상============================================================== */
 /* 새끼 북극곰 이야기============================================================== */
 /* 빙하 면적 감소============================================================== */
