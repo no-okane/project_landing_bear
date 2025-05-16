@@ -31,6 +31,43 @@
     #wrap .descread .container h2 {font-size: 2.5rem; margin-bottom: 40px;}
     #wrap .descread .container p {font-size: 1.375rem; margin-bottom: 40px;}
     #wrap .descread .container .img {margin-bottom: 118px;}
+
+    /* 5행============================================ */
+    #wrap .disaster {padding: 200px 80px;}
+    #wrap .disaster .container h2 {font-size: 2.5rem; margin-bottom: 40px;}
+    #wrap .disaster .container p {font-size: 1rem; margin-bottom: 40px;}
+    #wrap .disaster .container .list li .top p {font-size: 1rem;}
+    #wrap .disaster .container .list li > p {font-size: 1rem;}
+
+    /* 6행============================================ */
+    #wrap .crisis {padding: 200px 80px;}
+    #wrap .crisis .container h2 {font-size: 2.5rem; margin-bottom: 40px;}
+    #wrap .crisis .container p {font-size: 1.375rem; margin-bottom: 40px;}
+    #wrap .crisis .container .img {margin-bottom: 118px;}
+
+    /* 7행============================================ */ 
+    #wrap .wwf {padding: 200px 80px;}
+    #wrap .wwf .container h2 {font-size: 3.125rem;}
+    #wrap .wwf .container p {font-size: 1.375rem;}
+
+    /* 8행============================================ */ 
+    #wrap .wwf2 {padding: 200px 80px;}
+    #wrap .wwf2 .container h2 {font-size: 2.5rem; margin-bottom: 40px;}
+    #wrap .wwf2 .container .list {
+        grid-template-areas: 
+        'img1'
+        'img2'
+        'img3'
+    ;
+    grid-template-columns:1fr;
+    grid-template-rows: 300px 300px 300px;
+    }
+    #wrap .wwf2 .container .list li .contents {
+        bottom: 0; left: 0;
+        width: 100%; height: max-content;
+    }
+    #wrap .wwf2 .container .list li .contents h3 {font-size: 1.375rem;}
+    #wrap .wwf2 .container .list li .contents p {font-size: 1rem;}
 } /* 1249 ~ 850 end */
 
 @media screen and (max-width: 849px) {
@@ -63,4 +100,32 @@
     #wrap .descread .container h2 {font-size: 1.375rem; margin-bottom: 20px; line-height: 150%;}
     #wrap .descread .container p {font-size: 0.813rem; margin-bottom: 20px; line-height: 170%;}
     #wrap .descread .container .img {margin-bottom: 0;}
-}/* 849 ~ 320 end*/
+
+    /* 5행============================================ */
+    #wrap .disaster {padding: 70px 15px;}
+    #wrap .disaster .container h2 {font-size: 1.375rem; margin-bottom: 40px;}
+    #wrap .disaster .container p {font-size: 0.813rem; margin-bottom: 40px;}
+    #wrap .disaster .container .list {grid-template-columns: 1fr;}
+    #wrap .disaster .container .list li .top {height: 150px;}
+    #wrap .disaster .container .list li:nth-child(1) .top::before,
+    #wrap .disaster .container .list li:nth-child(2) .top::before,
+    #wrap .disaster .container .list li:nth-child(3) .top::before {height: 80%;}
+    #wrap .disaster .container .list li .top h3 {font-size: 1.375rem;}
+    #wrap .disaster .container .list li > p {font-size: 0.813rem; height: max-content;}
+
+    /* 6행============================================ */
+    #wrap .crisis {padding: 70px 15px;}
+    #wrap .crisis .container h2 {font-size: 1.375rem; margin-bottom: 20px; line-height: 150%;}
+    #wrap .crisis .container p {font-size: 0.813rem; margin-bottom: 20px; line-height: 170%;}
+    #wrap .crisis .container .img {margin-bottom: 0;}  
+
+    /* 7행============================================ */ 
+    #wrap .wwf {padding: 70px 15px;}
+    #wrap .wwf .container h2 {font-size: 1.875rem;}
+    #wrap .wwf .container p {font-size: 0.813rem}
+
+    /* 8행============================================ */ 
+    #wrap .wwf2 {padding: 70px 15px;}
+    #wrap .wwf2 .container h2 {font-size: 1.375rem; font-weight: 500;}
+    #wrap .wwf2 .container .list li .contents p {font-size: 0.813rem;}
+}/* 849 ~ 320 end*/ 

@@ -1,11 +1,16 @@
 /* index css */
 /* 반응형 css 속성 변경 시 애니메이션 적용 속성 */
 body * {transition: all 0.3s;}
+
+.container {
+    max-width: 1250px;
+    min-width: 320px;
+}
 /* 북극곰 후원 안내============================================================== */
 /* ▼ 기본값 유지를 위해 작성 x, 기본값 : 너비는 부모의 100%, 높이는 내용만큼 */
-#wrap {}
+    #wrap {}
 #wrap .intro {
-    height: auto;
+    /* height: auto; */
     background: url(../images/bg1.png) no-repeat center;
     background-size: cover;
     position: relative;
@@ -16,7 +21,7 @@ body * {transition: all 0.3s;}
     content: '';/* 가상 요소 after 필수 속성 */
     display: block;/* 가상 요소 after 필수 속성 */
     width: 100%;
-    height: 100%;
+    height: 100vh;
 
     position: absolute;
     left: 0;
@@ -174,7 +179,7 @@ body * {transition: all 0.3s;}
 #wrap .video {
     background: url(../images/video_bg.png) no-repeat right center / cover;
     padding: 200px 0;
-    height: auto;
+    /* height: auto; */
 }
 #wrap .video .container {
     margin: 0 auto;
@@ -228,6 +233,7 @@ body * {transition: all 0.3s;}
 #wrap .descread {
     background: url(../images/50_bg.png) left center / cover;
     padding: 200px 0;
+    /* height: auto; */
 }
 #wrap .descread .container {
     margin: 0 auto;
@@ -257,8 +263,293 @@ body * {transition: all 0.3s;}
     background: url(../images/50.png) no-repeat center / cover;
 }
 /* 인류 재앙============================================================== */
+#wrap .disaster {
+    background-color: #F5F5F5;
+    padding: 200px 0;
+}
+#wrap .disaster .container {
+    margin: 0 auto;
+}
+#wrap .disaster .container * {color: #000; text-align: center;}
+#wrap .disaster .container h2 {
+    text-align: center;
+    font-size: 3.438rem;
+    font-weight: 500;
+    margin-bottom: 55px;
+}
+#wrap .disaster .container p {
+    font-size: 1.25rem;
+    line-height: 170%;
+    margin-bottom: 55px;
+}
+#wrap .disaster .container .list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+#wrap .disaster .container .list li {
+    position: relative;
+}
+#wrap .disaster .container .list li .top {
+    width: 100%; height: 320px;
+    margin: top auto;
+    padding: 48px 0;
+}
+#wrap .disaster .container .list li .top > * {color: #fff;}
+#wrap .disaster .container .list li .top h3 {
+    font-size: 2.688rem;
+    position: relative;
+    z-index: 5;
+    margin-bottom: 10px;
+}
+#wrap .disaster .container .list li .top p {
+    font-size: 1.25rem;
+    position: relative;
+    z-index: 5;
+}
+#wrap .disaster .container .list li > p {
+    padding: 20px;
+    font-size: 1.25rem;
+    background-color: #fff;
+    height: 250px;
+}
+
+#wrap .disaster .container .list li:nth-of-type(1) .top {
+    background: url(../images/28.png) center /cover;
+}
+#wrap .disaster .container .list li:nth-of-type(1) .top h3 {}
+#wrap .disaster .container .list li:nth-of-type(1) .top p {}
+
+#wrap .disaster .container .list li:nth-child(2) .top {
+    background: url(../images/27.png) center /cover;
+}
+#wrap .disaster .container .list li:nth-child(2) .top h3 {}
+#wrap .disaster .container .list li:nth-child(2) .top p {}
+
+#wrap .disaster .container .list li:nth-child(3) .top {
+    background: url(../images/wwf.jpg) center /cover;
+}
+#wrap .disaster .container .list li:nth-child(1) .top::before,
+#wrap .disaster .container .list li:nth-child(2) .top::before,
+#wrap .disaster .container .list li:nth-child(3) .top::before {
+    content: '';/* 가상 요소 after 필수 속성 */
+    display: block;/* 가상 요소 after 필수 속성 */
+    width: 100%;
+    height: 80%;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    background: linear-gradient(#000 10%, transparent 60%);
+    /* background: linear-gradient(#000 10%, transparent 60%); */
+    z-index: 3;
+}
+#wrap .disaster .container .list li:nth-child(3) .top h3 {
+}
+#wrap .disaster .container .list li:nth-child(3) .top p {}
+
+
 /* 지구 위기============================================================== */
+#wrap .crisis {
+    background: url(../images/50_bg.png) left center / cover;
+    padding: 200px 0;
+    /* height: auto; */
+}
+#wrap .crisis .container {
+    margin: 0 auto;
+    max-width: 1250px;
+    min-width: 320px;
+}
+#wrap .crisis .container h2 {
+    color: #fff;
+    font-size: 3.438rem;
+    font-weight: 500;
+    margin-bottom: 80px;
+    line-height: 130%;
+}
+#wrap .crisis .container h2 em {
+    color: #050505;
+    background-color: #fff;
+}
+#wrap .crisis .container p {
+    color: #fff;
+    margin-bottom: 80px;
+    font-size: 2.125rem;
+    line-height: 130%;
+    font-weight: 700;
+}
+#wrap .crisis .container .img {
+    height: 550px;
+    background: url(../images/bg2.png) no-repeat center / cover;
+}
+
+
+
 /* WWF 홍보============================================================== */
+#wrap .wwf {
+    background: url(../images/wwf.jpg) center / cover;
+    padding: 200px 0;
+    /* height: auto; */
+    position: relative;
+}
+#wrap .wwf::before {
+    content: '';/* 가상 요소 after 필수 속성 */
+    display: block;/* 가상 요소 after 필수 속성 */
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    background: rgba(255,255,255,0.7);
+    /* background: linear-gradient(#000 10%, transparent 60%); */
+    z-index: 3;
+}
+
+#wrap .wwf .container {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 80px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 5;
+}
+#wrap .wwf .container > * {color: #000;}
+#wrap .wwf .container h2 {
+    font-size: 4.375rem;
+    font-weight: 700;
+}
+#wrap .wwf .container p {
+    line-height: 150%;
+    font-size: 2.125rem;
+}
 /* 다양한 활동============================================================== */
+#wrap .wwf2 {
+    background-color: #F5F5F5;
+    padding: 200px 0;
+}
+#wrap .wwf2 .container {
+    margin: 0 auto;
+}
+#wrap .wwf2 .container h2 {
+    text-align: center;
+    font-size: 4.375rem;
+    font-weight: 500;
+    margin-bottom: 80px;
+    line-height: 130%;
+    color: #000;
+}
+#wrap .wwf2 .container .list {
+    display: grid;
+    grid-template-areas: 
+        'img1 img2'
+        'img3 img2'
+    ;
+    grid-template-columns:605px 605px;
+    grid-template-rows:300px 300px;
+    gap: 20px;
+}
+#wrap .wwf2 .container .list li {
+    position: relative;
+}
+#wrap .wwf2 .container .list li .contents {
+    width:334px;
+    height: 167px;
+    padding: 20px;
+    background-color: rgba(0,0,0,0.7);
+    
+    position: absolute;
+    bottom: 20px; left: 0;
+}
+#wrap .wwf2 .container .list li .contents * {color: #fff;}
+#wrap .wwf2 .container .list li:nth-of-type(1) {
+    grid-area: img1;
+    background: url(../images/332.png) center 60% / cover;
+}
+#wrap .wwf2 .container .list li:nth-of-type(2) {
+    grid-area: img2;
+    background: url(../images/50.png) center / cover;
+}
+#wrap .wwf2 .container .list li:nth-of-type(3) {
+    grid-area: img3;
+    background: url(../images/wwf.jpg) center / cover;
+}
+#wrap .wwf2 .container .list li .contents h3 {
+    margin-bottom: 15px;
+    font-size: 2.125rem;
+    font-weight: 700;
+}
+#wrap .wwf2 .container .list li .contents p {
+    line-height: 170%;
+    font-size: 1.25rem;
+}
 /* 감사 선물============================================================== */
+#wrap .gift {
+    background: url(../images/50_bg.png) left center / cover;
+    padding: 200px 0;
+}
+#wrap .gift .container {
+    margin: 0 auto;
+}
+#wrap .gift .container * {color: #fff;}
+#wrap .gift .container .top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 70px;
+}
+#wrap .gift .container .top h2 {
+    font-size: 3.438rem;
+    font-weight: 500;
+}
+#wrap .gift .container .top .spon {
+    background: linear-gradient(90deg,rgba(254, 147, 0, 1) 0%, rgba(255, 115, 0, 1) 100%);
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    padding: 15px 70px;
+    height: 71px;
+    border-radius: 50px;
+    width: max-content;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+#wrap .gift .container .top .spon .sponsor_btn {
+    display: block;
+    font-size: 2.125rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+#wrap .gift .container .list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 70px;
+}
+#wrap .gift .container .list li {}
+#wrap .gift .container .list li .img {}
+#wrap .gift .container .list li:nth-of-type(1) .img {}
+#wrap .gift .container .list li:nth-of-type(2) .img {}
+#wrap .gift .container .list li:nth-of-type(3) .img {}
+#wrap .gift .container .list li p {}
+#wrap .gift .container > p {
+    background-color: #fff;
+    color: #000;
+    width: max-content;
+    text-align: right;
+}
+
+
 /* 결제 안내 사항============================================================== */
+#wrap .info {
+    background-color: #F5F5F5;
+    padding: 100px 0;
+}
+#wrap .info .container {
+    margin: 0 auto;
+}
+#wrap .info .container > * {color: #000;}
+#wrap .info .container p {font-size: 1.25rem; line-height: 170%;}
