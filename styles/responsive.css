@@ -59,8 +59,8 @@
         'img2'
         'img3'
     ;
-    grid-template-columns:1fr;
-    grid-template-rows: 300px 300px 300px;
+        grid-template-columns:1fr;
+        grid-template-rows: 300px 300px 300px;
     }
     #wrap .wwf2 .container .list li .contents {
         bottom: 0; left: 0;
@@ -68,6 +68,31 @@
     }
     #wrap .wwf2 .container .list li .contents h3 {font-size: 1.375rem;}
     #wrap .wwf2 .container .list li .contents p {font-size: 1rem;}
+    /* 9행============================================ */ 
+    #wrap .gift {padding: 100px 80px;}
+    #wrap .gift .container .top {margin-bottom: 40px;}
+    #wrap .gift .container .top h2 {font-size: 2.5rem;}
+    #wrap .gift .container .top .spon {line-height: 62px; width: 270px; padding: 0 35px; height: 62px;}
+    #wrap .gift .container .top .spon .sponsor_btn {font-size: 1.375rem;}
+    #wrap .gift .container .list {
+        display: grid;
+        grid-template-areas: 
+            'img4 img5'
+            'img6 img6';
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 367px 367px;
+        row-gap: 20px;
+        column-gap: 45px;
+        margin-bottom: 40px;
+    }
+    #wrap .gift .container .list li:nth-of-type(1){grid-area: img4;}
+    #wrap .gift .container .list li:nth-of-type(2){grid-area: img5;}
+    #wrap .gift .container .list li:nth-of-type(3){grid-area: img6;}
+    #wrap .gift .container > p {font-size: 1rem;}
+    /* 10행============================================ */ 
+    #wrap .info {padding: 100px 80px;}
+    #wrap .info .container h2 {font-size: 1.375rem;}
+    #wrap .info .container p {font-size: 1rem;}
 } /* 1249 ~ 850 end */
 
 @media screen and (max-width: 849px) {
@@ -128,4 +153,18 @@
     #wrap .wwf2 {padding: 70px 15px;}
     #wrap .wwf2 .container h2 {font-size: 1.375rem; font-weight: 500;}
     #wrap .wwf2 .container .list li .contents p {font-size: 0.813rem;}
+    /* 9행============================================ */ 
+    #wrap .gift {padding: 70px 15px;}
+    #wrap .gift .container .top h2 {font-size: 1.375rem;}
+    #wrap .gift .container .list {
+        grid-template-areas: 
+        'img4'
+        'img5'
+        'img6'
+        ;
+        grid-template-columns:1fr;
+        gap: 22px;
+    }
+    /* 10행============================================ */ 
+    #wrap .info {padding: 70px 15px;}
 }/* 849 ~ 320 end*/ 
